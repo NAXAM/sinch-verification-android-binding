@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.26430.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naxam.SinchVerification.Droid", "Naxam.SinchVerification.Droid\Naxam.SinchVerification.Droid.csproj", "{DA9A1E39-67EB-4B80-BF2F-5ED31115E767}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "demo", "demo", "{2A02D40A-9964-44E0-8AE0-F8596552DC62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SinchVerificationQs", "demo\SinchVerificationQs\SinchVerificationQs.csproj", "{5F91017E-0F7F-451E-99AF-BFBD4403BCFD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +19,17 @@ Global
 		{DA9A1E39-67EB-4B80-BF2F-5ED31115E767}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA9A1E39-67EB-4B80-BF2F-5ED31115E767}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA9A1E39-67EB-4B80-BF2F-5ED31115E767}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F91017E-0F7F-451E-99AF-BFBD4403BCFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F91017E-0F7F-451E-99AF-BFBD4403BCFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F91017E-0F7F-451E-99AF-BFBD4403BCFD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{5F91017E-0F7F-451E-99AF-BFBD4403BCFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F91017E-0F7F-451E-99AF-BFBD4403BCFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F91017E-0F7F-451E-99AF-BFBD4403BCFD}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5F91017E-0F7F-451E-99AF-BFBD4403BCFD} = {2A02D40A-9964-44E0-8AE0-F8596552DC62}
 	EndGlobalSection
 EndGlobal

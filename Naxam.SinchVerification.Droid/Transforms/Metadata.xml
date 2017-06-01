@@ -6,4 +6,78 @@
   This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
   -->
+  <attr path="/api/package[@name='com.sinch.sanalytics.client.android']/class[@name='DefaultSystemPreferencesProvider']/method[@name='newInstance' and count(parameter)=1 and parameter[1][@type='java.lang.Object']]" name="managedName">CreateInstance</attr>
+  <attr path="/api/package[@name='com.sinch.sanalytics.client.spi']/class[@name='AbstractServiceProvider']" name="visibility">public</attr>
+  
+  <remove-node path="/api/package[@name='com.sinch.verification.a']" />
+  <remove-node path="/api/package[@name='com.sinch.verification.a.b']" />
+  <remove-node path="/api/package[@name='com.sinch.verification.a.c']" />
+  <remove-node path="/api/package[@name='com.sinch.verification.a.d']" />
+  <remove-node path="/api/package[@name='com.sinch.verification.a.e']" />
+  <remove-node path="/api/package[@name='com.sinch.verification.a.f']" />
+
+  <add-node path="/api/package[@name='com.sinch.verification']" >
+    <class abstract="false" deprecated="not deprecated" final="true" name="SinchVerification" static="false" visibility="public" extends="java.lang.Object">
+        <constructor deprecated="not deprecated" final="false" name="SinchVerification" static="false" type="com.sinch.verification.SinchVerification" visibility="public" />
+
+        <method abstract="false" deprecated="not deprecated" final="false" name="config" native="false" return="com.sinch.verification.ConfigBuilder" static="true" synchronized="false" visibility="public" />
+
+        <method abstract="false" deprecated="not deprecated" final="true" name="createSmsVerification" native="false" return="com.sinch.verification.Verification" static="true" synchronized="false" visibility="public">
+          <parameter name="p0" type="com.sinch.verification.Config"/>
+          <parameter name="p1" type="java.lang.String"/>
+          <parameter name="p2" type="com.sinch.verification.VerificationListener"/>
+        </method>
+        
+        <method abstract="false" deprecated="not deprecated" final="true" name="createSmsVerification" native="false" return="com.sinch.verification.Verification" static="true" synchronized="false" visibility="public">
+          <parameter name="p0" type="com.sinch.verification.Config"/>
+          <parameter name="p1" type="java.lang.String"/>
+          <parameter name="p2" type="java.lang.String"/>
+          <parameter name="p3" type="com.sinch.verification.VerificationListener"/>
+        </method>
+        
+        <method abstract="false" deprecated="not deprecated" final="true" name="createSmsVerification" native="false" return="com.sinch.verification.Verification" static="true" synchronized="false" visibility="public">
+          <parameter name="p0" type="com.sinch.verification.Config"/>
+          <parameter name="p1" type="java.lang.String"/>
+          <parameter name="p2" type="java.lang.String"/>
+          <parameter name="p3" type="java.util.List"/>
+          <parameter name="p4" type="com.sinch.verification.VerificationListener"/>
+        </method>
+        
+        <method abstract="false" deprecated="not deprecated" final="true" name="createFlashCallVerification" native="false" return="com.sinch.verification.Verification" static="true" synchronized="false" visibility="public">
+          <parameter name="p0" type="com.sinch.verification.Config"/>
+          <parameter name="p1" type="java.lang.String"/>
+          <parameter name="p2" type="com.sinch.verification.VerificationListener"/>
+        </method>
+        
+        <method abstract="false" deprecated="not deprecated" final="true" name="createFlashCallVerification" native="false" return="com.sinch.verification.Verification" static="true" synchronized="false" visibility="public">
+          <parameter name="p0" type="com.sinch.verification.Config"/>
+          <parameter name="p1" type="java.lang.String"/>
+          <parameter name="p2" type="java.lang.String"/>
+          <parameter name="p3" type="com.sinch.verification.VerificationListener"/>
+        </method>
+
+        <method abstract="false" deprecated="not deprecated" final="false" name="getVersion" native="false" return="com.sinch.verification.ConfigBuilder" static="true" synchronized="false" visibility="public" />
+        
+        <method abstract="false" deprecated="not deprecated" final="true" name="setLogger" native="false" return="void" static="true" synchronized="false" visibility="public">
+          <parameter name="p0" type="com.sinch.verification.Logger"/>
+        </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" final="false" name="PhoneNumberUtils" static="false" visibility="public" extends="java.lang.Object">
+        <constructor deprecated="not deprecated" final="false" name="PhoneNumberUtils" static="false" type="com.sinch.verification.PhoneNumberUtils" visibility="public" />
+
+        <method abstract="false" deprecated="not deprecated" final="true" name="formatNumberToE164" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+          <parameter name="p0" type="java.lang.String"/>
+          <parameter name="p1" type="java.lang.String"/>
+        </method>
+        
+        <method abstract="false" deprecated="not deprecated" final="true" name="isPossibleNumber" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+          <parameter name="p0" type="java.lang.String"/>
+          <parameter name="p1" type="java.lang.String"/>
+        </method>
+        
+        <method abstract="false" deprecated="not deprecated" final="true" name="getDefaultCountryIso" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+          <parameter name="p0" type="android.content.Context"/>
+        </method>
+    </class>
+  </add-node>
 </metadata>
